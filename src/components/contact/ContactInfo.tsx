@@ -1,8 +1,11 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { PROFILE_INFO } from "@/data/portfolioData";
 import { GithubIcon, LinkedinIcon } from "../ui/SocialIcons";
 
 interface ContactInfoProps {
   email?: string;
+  whatsapp?: string;
+  whatsappUrl?: string;
   location?: string;
   githubUrl?: string;
   linkedinUrl?: string;
@@ -10,11 +13,13 @@ interface ContactInfoProps {
 }
 
 export function ContactInfo({
-  email = "esther.v.bacelar@gmail.com",
-  location = "Remoto • Brasil & Internacional",
-  githubUrl = "https://github.com/esthervbac",
-  linkedinUrl = "https://www.linkedin.com/in/esther-valentim-bacelar/",
-  description = "Tem um projeto em mente, uma vaga ou quer trocar uma ideia sobre desenvolvimento web? Me mande uma mensagem pelo formulário ou direto no meu e-mail.",
+  email = PROFILE_INFO.email,
+  whatsapp = PROFILE_INFO.whatsapp,
+  whatsappUrl = PROFILE_INFO.whatsappUrl,
+  location = PROFILE_INFO.location,
+  githubUrl = PROFILE_INFO.githubUrl,
+  linkedinUrl = PROFILE_INFO.linkedinUrl,
+  description = "Tem um projeto em mente, uma vaga ou quer trocar uma ideia sobre desenvolvimento Full Stack e Front-end? Me mande uma mensagem pelo formulário, WhatsApp ou direto no meu e-mail.",
 }: ContactInfoProps) {
   return (
     <div className="space-y-6">
@@ -39,10 +44,27 @@ export function ContactInfo({
 
         <div className="mt-5 flex items-center gap-3.5 border-t border-slate-800 pt-5">
           <div className="rounded-xl bg-purple-500/15 p-3 text-purple-400">
+            <Phone className="h-5 w-5" />
+          </div>
+          <div>
+            <p className="text-xs text-slate-400">WhatsApp</p>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold text-purple-300 transition-colors hover:text-purple-200 hover:underline"
+            >
+              {whatsapp}
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-5 flex items-center gap-3.5 border-t border-slate-800 pt-5">
+          <div className="rounded-xl bg-purple-500/15 p-3 text-purple-400">
             <MapPin className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-xs text-slate-400">Atuação</p>
+            <p className="text-xs text-slate-400">Localização</p>
             <p className="text-sm font-medium text-slate-200">{location}</p>
           </div>
         </div>

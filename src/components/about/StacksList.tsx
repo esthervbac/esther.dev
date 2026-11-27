@@ -4,7 +4,7 @@ import { AboutCard } from "./AboutCard";
 interface StacksData {
   frontend: string[];
   backend: string[];
-  databaseAndTools: string[];
+  databaseAndCloud: string[];
 }
 
 interface StacksListProps {
@@ -45,18 +45,18 @@ export function StacksList({ stacks }: StacksListProps) {
 
       <div className="space-y-5">
         <StackCategory
-          label="Frontend"
+          label="Front-end"
           items={stacks.frontend}
           badgeClassName="border-purple-500/25 bg-purple-500/10 text-purple-200"
         />
         <StackCategory
-          label="Backend & APIs"
+          label="Back-end"
           items={stacks.backend}
           badgeClassName="border-violet-500/25 bg-violet-500/10 text-violet-200"
         />
         <StackCategory
-          label="Dados & Deploy"
-          items={stacks.databaseAndTools}
+          label="Bancos de Dados, Cloud & Ferramentas"
+          items={stacks.databaseAndCloud}
           badgeClassName="border-slate-700 bg-slate-800/80 text-slate-300"
         />
       </div>

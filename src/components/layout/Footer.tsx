@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import { PROFILE_INFO } from "@/data/portfolioData";
 import { Logo } from "../ui/Logo";
 import { GithubIcon, LinkedinIcon } from "../ui/SocialIcons";
 import { CopyrightYear } from "./CopyrightYear";
@@ -10,20 +11,20 @@ export function Footer() {
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <Logo />
           <p className="text-sm text-slate-400">
-            Construindo interfaces modernas e soluções fullstack.
+            {PROFILE_INFO.fullName} — {PROFILE_INFO.roleTitle}
           </p>
         </div>
 
         <div className="flex items-center gap-4">
           <a
-            href="mailto:esther.v.bacelar@gmail.com"
+            href={`mailto:${PROFILE_INFO.email}`}
             aria-label="Enviar e-mail"
             className="rounded-full border border-slate-800 bg-slate-900 p-2.5 text-slate-300 transition-colors hover:border-purple-500/50 hover:text-purple-400"
           >
             <Mail className="h-5 w-5" />
           </a>
           <a
-            href="https://github.com/esthervbac"
+            href={PROFILE_INFO.githubUrl}
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -32,7 +33,7 @@ export function Footer() {
             <GithubIcon className="h-5 w-5" />
           </a>
           <a
-            href="https://www.linkedin.com/in/esther-valentim-bacelar/"
+            href={PROFILE_INFO.linkedinUrl}
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"

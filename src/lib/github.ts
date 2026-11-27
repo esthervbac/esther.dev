@@ -66,7 +66,6 @@ export async function getGitHubProjects(
           new Set(rawStacks.map((item) => item.trim()).filter(Boolean)),
         );
 
-        // Garante que o link demo tenha protocolo https://
         const cleanHomepage = repo.homepage?.trim() || null;
         const demoUrl =
           cleanHomepage && !cleanHomepage.startsWith("http")
