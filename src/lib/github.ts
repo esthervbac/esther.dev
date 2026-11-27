@@ -19,6 +19,7 @@ interface GitHubRepoResponse {
   language: string | null;
   fork: boolean;
   updated_at: string;
+  pushed_at: string;
 }
 
 function formatRepoName(name: string): string {
@@ -32,7 +33,7 @@ export async function getGitHubProjects(
 ): Promise<GitHubProject[]> {
   try {
     const response = await fetch(
-      `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`,
+      `https://api.github.com/users/${username}/repos?sort=pushed&direction=desc&per_page=100`,
       {
         headers: {
           Accept: "application/vnd.github+json",
@@ -55,6 +56,10 @@ export async function getGitHubProjects(
       .filter(
         (repo) =>
           !repo.fork && repo.name.toLowerCase() !== username.toLowerCase(),
+      )
+      .sort(
+        (a, b) =>
+          new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime(),
       )
       .map((repo) => {
         const rawStacks = [

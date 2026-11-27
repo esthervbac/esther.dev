@@ -2,6 +2,10 @@
 
 Portfólio pessoal desenvolvido para apresentar minha trajetória profissional, stacks tecnológicas, projetos sincronizados diretamente com o GitHub e canais de contato direto.
 
+## Para acessar o site:
+
+Link: https://estherdev.vercel.app/
+
 ---
 
 ## Preview & Identidade Visual
