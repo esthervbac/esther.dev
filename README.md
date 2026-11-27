@@ -83,7 +83,7 @@ src/
 1. Clonar o repositório
 
 ```
-git clone [https://github.com/esthervbac/esther-dev-portfolio.git](https://github.com/esthervbac/esther-dev-portfolio.git)
+git clone https://github.com/esthervbac/esther-dev-portfolio.git
 cd esther-dev-portfolio
 ```
 
@@ -93,11 +93,10 @@ cd esther-dev-portfolio
 npm install
 ```
 
-3. Configurar as variáveis de ambiente
-   Crie um arquivo .env.local na raiz do projeto com as credenciais para envio de e-mail:
+3. Configurar as variáveis de ambiente. Crie um arquivo .env.local na raiz do projeto com as credenciais para envio de e-mail:
 
 ```
-EMAIL_USER=esther.v.bacelar@gmail.com
+EMAIL_USER=seuemail@email.com
 EMAIL_PASS=sua_senha_de_app_do_google
 ```
 
