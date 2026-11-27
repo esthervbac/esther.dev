@@ -3,8 +3,6 @@ export const PROFILE_INFO = {
   roleTitle: "Desenvolvedora Full Stack & Front-end",
   tagline: "React.js • TypeScript • Node.js",
   location: "Niterói, Rio de Janeiro, Brasil",
-  whatsapp: "(21) 97203-5444",
-  whatsappUrl: "https://wa.me/5521972035444",
   email: "esther.v.bacelar@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/esther-valentim-bacelar",
   githubUrl: "https://github.com/esthervbac",
