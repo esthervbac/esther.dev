@@ -7,9 +7,9 @@ import { Footer } from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Esther.dev | Desenvolvedora Fullstack & Frontend",
+  title: "Esther.dev | Desenvolvedora Full Stack & Front-end",
   description:
-    "Portfólio profissional de Esther Bacelar — Desenvolvedora Fullstack & Frontend especializada em React, Next.js, TypeScript e Node.js.",
+    "Portfólio profissional de Esther Valentim Bacelar — Desenvolvedora Full Stack & Front-end especializada em React.js, Next.js, TypeScript e Node.js.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={inter.className}>
         <Navbar />
         <main>{children}</main>
