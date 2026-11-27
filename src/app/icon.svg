@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#020617" />
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#a855f7" stroke-opacity="0.45" stroke-width="3" />
+  <text x="32" y="43" text-anchor="middle" font-family="Inter, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-weight="800" letter-spacing="-0.03em">
+    <tspan font-size="32" fill="#ffffff">E</tspan><tspan font-size="24" fill="#c084fc">.</tspan><tspan font-size="14" fill="#c084fc">dev</tspan>
+  </text>
+</svg>
