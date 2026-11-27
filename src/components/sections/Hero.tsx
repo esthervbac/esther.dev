@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Sparkles, Terminal } from "lucide-react";
+import { ArrowRight, Sparkles, Terminal } from "lucide-react";
 import { PROFILE_INFO } from "@/data/portfolioData";
 import { Button } from "../ui/Button";
 import { GithubIcon, LinkedinIcon } from "../ui/SocialIcons";
@@ -37,15 +37,13 @@ export function Hero() {
               responsivas a APIs REST, PostgreSQL, MongoDB e AWS.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a href="#contato">
-                <Button variant="primary">
-                  Vamos conversar <ArrowRight className="h-4 w-4" />
-                </Button>
-              </a>
-              <a href="/Curriculo_Esther_Desenvolvedor_Fullstack.pdf" download>
-                <Button variant="outline">
-                  <Download className="h-4 w-4" /> Baixar CV
+            <div className="mt-10 flex justify-center">
+              <a href="#contato" className="w-full sm:w-auto">
+                <Button
+                  variant="primary"
+                  className="w-full px-10 py-4 text-base sm:min-w-70"
+                >
+                  Vamos conversar <ArrowRight className="h-5 w-5" />
                 </Button>
               </a>
             </div>
